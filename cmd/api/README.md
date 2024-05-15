@@ -10,12 +10,12 @@
 | DB_NAME                  | Postgres Database name                                                                                                            | tekton_results                               |
 | DB_SSLMODE               | Database SSL mode                                                                                                                 | verify-full                                  |
 | DB_ENABLE_AUTO_MIGRATION | Auto-migrate the database on startup (create/update schemas). For further details, refer to <https://gorm.io/docs/migration.html> | true (default)                               |
-| GRPC_PORT                | gRPC Server Port                                                                                                                  | 50051 (default)                              |
-| REST_PORT                | REST proxy Port                                                                                                                   | 8080  (default)                              |
+| SERVER_PORT              | gRPC and REST Server Port                                                                                                         | 8080  (default)                              |
 | PROMETHEUS_PORT          | Prometheus Port                                                                                                                   | 9090  (default)                              |
 | TLS_HOSTNAME_OVERRIDE    | Override the hostname used to serve TLS. This should not be set (or set to the empty string) in production environments.          | results.tekton.dev                           |
 | TLS_PATH                 | Path to TLS files                                                                                                                 | /etc/tls                                     |
-| NO_AUTH                  | Disable RBAC check for resources                                                                                                  | false (default)                              |
+| AUTH_DISABLE             | Disable RBAC check for resources                                                                                                  | false (default)                              |
+| AUTH_IMPERSONATE         | Enable RBAC impersonation                                                                                                         | true (default)                               |
 | LOG_LEVEL                | Log level for api server                                                                                                          | info (default)                               |
 | LOGS_API                 | Enable logs storage service                                                                                                       | false (default)                              |
 | LOGS_TYPE                | Determine Logs storage backend type                                                                                               | File (default)                               |
